@@ -1,0 +1,212 @@
+(
+    types: [
+        (
+            name: None,
+            inner: Vector(
+                size: Quad,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Bi,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: Some("FullscreenVertexOutput"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("position"),
+                        ty: 1,
+                        binding: Some(BuiltIn(Position(
+                            invariant: false,
+                        ))),
+                        offset: 0,
+                    ),
+                    (
+                        name: Some("uv"),
+                        ty: 2,
+                        binding: Some(Location(
+                            location: 0,
+                            second_blend_source: false,
+                            interpolation: Some(Perspective),
+                            sampling: Some(Center),
+                        )),
+                        offset: 16,
+                    ),
+                ],
+                span: 32,
+            ),
+        ),
+        (
+            name: None,
+            inner: Scalar((
+                kind: Uint,
+                width: 4,
+            )),
+        ),
+    ],
+    special_types: (
+        ray_desc: None,
+        ray_intersection: None,
+        predeclared_types: {},
+    ),
+    constants: [],
+    overrides: [],
+    global_variables: [],
+    global_expressions: [],
+    functions: [],
+    entry_points: [
+        (
+            name: "fullscreen_vertex_shader",
+            stage: Vertex,
+            early_depth_test: None,
+            workgroup_size: (0, 0, 0),
+            function: (
+                name: Some("fullscreen_vertex_shader"),
+                arguments: [
+                    (
+                        name: Some("vertex_index"),
+                        ty: 4,
+                        binding: Some(BuiltIn(VertexIndex)),
+                    ),
+                ],
+                result: Some((
+                    ty: 3,
+                    binding: None,
+                )),
+                local_variables: [],
+                expressions: [
+                    FunctionArgument(0),
+                    Literal(U32(1)),
+                    Binary(
+                        op: ShiftRight,
+                        left: 1,
+                        right: 2,
+                    ),
+                    As(
+                        expr: 3,
+                        kind: Float,
+                        convert: Some(4),
+                    ),
+                    Literal(U32(1)),
+                    Binary(
+                        op: And,
+                        left: 1,
+                        right: 5,
+                    ),
+                    As(
+                        expr: 6,
+                        kind: Float,
+                        convert: Some(4),
+                    ),
+                    Compose(
+                        ty: 2,
+                        components: [
+                            4,
+                            7,
+                        ],
+                    ),
+                    Literal(F32(2.0)),
+                    Binary(
+                        op: Multiply,
+                        left: 8,
+                        right: 9,
+                    ),
+                    Literal(F32(2.0)),
+                    Literal(F32(-2.0)),
+                    Compose(
+                        ty: 2,
+                        components: [
+                            11,
+                            12,
+                        ],
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 10,
+                        right: 13,
+                    ),
+                    Literal(F32(-1.0)),
+                    Literal(F32(1.0)),
+                    Compose(
+                        ty: 2,
+                        components: [
+                            15,
+                            16,
+                        ],
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 14,
+                        right: 17,
+                    ),
+                    Literal(F32(0.0)),
+                    Literal(F32(1.0)),
+                    Compose(
+                        ty: 1,
+                        components: [
+                            18,
+                            19,
+                            20,
+                        ],
+                    ),
+                    Compose(
+                        ty: 3,
+                        components: [
+                            21,
+                            10,
+                        ],
+                    ),
+                ],
+                named_expressions: {
+                    1: "vertex_index",
+                    10: "uv",
+                    21: "clip_position",
+                },
+                body: [
+                    Emit((
+                        start: 2,
+                        end: 4,
+                    )),
+                    Emit((
+                        start: 5,
+                        end: 8,
+                    )),
+                    Emit((
+                        start: 9,
+                        end: 10,
+                    )),
+                    Emit((
+                        start: 12,
+                        end: 14,
+                    )),
+                    Emit((
+                        start: 16,
+                        end: 18,
+                    )),
+                    Emit((
+                        start: 20,
+                        end: 21,
+                    )),
+                    Emit((
+                        start: 21,
+                        end: 22,
+                    )),
+                    Return(
+                        value: Some(22),
+                    ),
+                ],
+            ),
+        ),
+    ],
+)

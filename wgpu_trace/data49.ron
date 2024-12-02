@@ -1,0 +1,214 @@
+(
+    types: [
+        (
+            name: None,
+            inner: Vector(
+                size: Quad,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Bi,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: Some("FullscreenVertexOutputX_naga_oil_mod_XMJSXM6K7MNXXEZK7OBUXAZLMNFXGKOR2MZ2WY3DTMNZGKZLOL53GK4TUMV4F643IMFSGK4QX"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("position"),
+                        ty: 1,
+                        binding: Some(BuiltIn(Position(
+                            invariant: false,
+                        ))),
+                        offset: 0,
+                    ),
+                    (
+                        name: Some("uv"),
+                        ty: 2,
+                        binding: Some(Location(
+                            location: 0,
+                            second_blend_source: false,
+                            interpolation: Some(Perspective),
+                            sampling: Some(Center),
+                        )),
+                        offset: 16,
+                    ),
+                ],
+                span: 32,
+            ),
+        ),
+        (
+            name: None,
+            inner: Scalar((
+                kind: Float,
+                width: 4,
+            )),
+        ),
+        (
+            name: Some("FragmentOutput"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("frag_depth"),
+                        ty: 4,
+                        binding: Some(BuiltIn(FragDepth)),
+                        offset: 0,
+                    ),
+                ],
+                span: 4,
+            ),
+        ),
+        (
+            name: None,
+            inner: Image(
+                dim: D2,
+                arrayed: false,
+                class: Sampled(
+                    kind: Uint,
+                    multi: false,
+                ),
+            ),
+        ),
+    ],
+    special_types: (
+        ray_desc: None,
+        ray_intersection: None,
+        predeclared_types: {},
+    ),
+    constants: [],
+    overrides: [],
+    global_variables: [
+        (
+            name: Some("material_id_texture"),
+            space: Handle,
+            binding: Some((
+                group: 0,
+                binding: 0,
+            )),
+            ty: 6,
+            init: None,
+        ),
+    ],
+    global_expressions: [],
+    functions: [],
+    entry_points: [
+        (
+            name: "fragment",
+            stage: Fragment,
+            early_depth_test: None,
+            workgroup_size: (0, 0, 0),
+            function: (
+                name: Some("fragment"),
+                arguments: [
+                    (
+                        name: Some("in"),
+                        ty: 3,
+                        binding: None,
+                    ),
+                ],
+                result: Some((
+                    ty: 5,
+                    binding: None,
+                )),
+                local_variables: [
+                    (
+                        name: Some("out"),
+                        ty: 5,
+                        init: None,
+                    ),
+                ],
+                expressions: [
+                    LocalVariable(1),
+                    AccessIndex(
+                        base: 1,
+                        index: 0,
+                    ),
+                    FunctionArgument(0),
+                    AccessIndex(
+                        base: 3,
+                        index: 0,
+                    ),
+                    Swizzle(
+                        size: Bi,
+                        vector: 4,
+                        pattern: (X, Y, X, X),
+                    ),
+                    As(
+                        expr: 5,
+                        kind: Sint,
+                        convert: Some(4),
+                    ),
+                    GlobalVariable(1),
+                    Literal(I32(0)),
+                    ImageLoad(
+                        image: 7,
+                        coordinate: 6,
+                        array_index: None,
+                        sample: None,
+                        level: Some(8),
+                    ),
+                    AccessIndex(
+                        base: 9,
+                        index: 0,
+                    ),
+                    As(
+                        expr: 10,
+                        kind: Float,
+                        convert: Some(4),
+                    ),
+                    Literal(F32(255.0)),
+                    Binary(
+                        op: Divide,
+                        left: 11,
+                        right: 12,
+                    ),
+                    Load(
+                        pointer: 1,
+                    ),
+                ],
+                named_expressions: {
+                    3: "in",
+                },
+                body: [
+                    Emit((
+                        start: 1,
+                        end: 2,
+                    )),
+                    Emit((
+                        start: 3,
+                        end: 6,
+                    )),
+                    Emit((
+                        start: 8,
+                        end: 11,
+                    )),
+                    Emit((
+                        start: 12,
+                        end: 13,
+                    )),
+                    Store(
+                        pointer: 2,
+                        value: 13,
+                    ),
+                    Emit((
+                        start: 13,
+                        end: 14,
+                    )),
+                    Return(
+                        value: Some(14),
+                    ),
+                ],
+            ),
+        ),
+    ],
+)

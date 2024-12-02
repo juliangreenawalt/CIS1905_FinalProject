@@ -1,0 +1,1234 @@
+(
+    types: [
+        (
+            name: None,
+            inner: Matrix(
+                columns: Quad,
+                rows: Quad,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Tri,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Scalar((
+                kind: Float,
+                width: 4,
+            )),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Quad,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Array(
+                base: 4,
+                size: Constant(6),
+                stride: 16,
+            ),
+        ),
+        (
+            name: None,
+            inner: Matrix(
+                columns: Tri,
+                rows: Tri,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Bi,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: Some("ColorGradingX_naga_oil_mod_XMJSXM6K7OJSW4ZDFOI5DU5TJMV3QX"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("balance"),
+                        ty: 6,
+                        binding: None,
+                        offset: 0,
+                    ),
+                    (
+                        name: Some("saturation"),
+                        ty: 2,
+                        binding: None,
+                        offset: 48,
+                    ),
+                    (
+                        name: Some("contrast"),
+                        ty: 2,
+                        binding: None,
+                        offset: 64,
+                    ),
+                    (
+                        name: Some("gamma"),
+                        ty: 2,
+                        binding: None,
+                        offset: 80,
+                    ),
+                    (
+                        name: Some("gain"),
+                        ty: 2,
+                        binding: None,
+                        offset: 96,
+                    ),
+                    (
+                        name: Some("lift"),
+                        ty: 2,
+                        binding: None,
+                        offset: 112,
+                    ),
+                    (
+                        name: Some("midtone_range"),
+                        ty: 7,
+                        binding: None,
+                        offset: 128,
+                    ),
+                    (
+                        name: Some("exposure"),
+                        ty: 3,
+                        binding: None,
+                        offset: 136,
+                    ),
+                    (
+                        name: Some("hue"),
+                        ty: 3,
+                        binding: None,
+                        offset: 140,
+                    ),
+                    (
+                        name: Some("post_saturation"),
+                        ty: 3,
+                        binding: None,
+                        offset: 144,
+                    ),
+                ],
+                span: 160,
+            ),
+        ),
+        (
+            name: Some("ViewX_naga_oil_mod_XMJSXM6K7OJSW4ZDFOI5DU5TJMV3QX"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("clip_from_world"),
+                        ty: 1,
+                        binding: None,
+                        offset: 0,
+                    ),
+                    (
+                        name: Some("unjittered_clip_from_world"),
+                        ty: 1,
+                        binding: None,
+                        offset: 64,
+                    ),
+                    (
+                        name: Some("world_from_clip"),
+                        ty: 1,
+                        binding: None,
+                        offset: 128,
+                    ),
+                    (
+                        name: Some("world_from_view"),
+                        ty: 1,
+                        binding: None,
+                        offset: 192,
+                    ),
+                    (
+                        name: Some("view_from_world"),
+                        ty: 1,
+                        binding: None,
+                        offset: 256,
+                    ),
+                    (
+                        name: Some("clip_from_view"),
+                        ty: 1,
+                        binding: None,
+                        offset: 320,
+                    ),
+                    (
+                        name: Some("view_from_clip"),
+                        ty: 1,
+                        binding: None,
+                        offset: 384,
+                    ),
+                    (
+                        name: Some("world_position"),
+                        ty: 2,
+                        binding: None,
+                        offset: 448,
+                    ),
+                    (
+                        name: Some("exposure"),
+                        ty: 3,
+                        binding: None,
+                        offset: 460,
+                    ),
+                    (
+                        name: Some("viewport"),
+                        ty: 4,
+                        binding: None,
+                        offset: 464,
+                    ),
+                    (
+                        name: Some("frustum"),
+                        ty: 5,
+                        binding: None,
+                        offset: 480,
+                    ),
+                    (
+                        name: Some("color_grading"),
+                        ty: 8,
+                        binding: None,
+                        offset: 576,
+                    ),
+                    (
+                        name: Some("mip_bias"),
+                        ty: 3,
+                        binding: None,
+                        offset: 736,
+                    ),
+                ],
+                span: 752,
+            ),
+        ),
+        (
+            name: None,
+            inner: Matrix(
+                columns: Tri,
+                rows: Quad,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Scalar((
+                kind: Uint,
+                width: 4,
+            )),
+        ),
+        (
+            name: Some("VertexInput"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("index"),
+                        ty: 11,
+                        binding: Some(BuiltIn(VertexIndex)),
+                        offset: 0,
+                    ),
+                    (
+                        name: Some("i_model_transpose_col0"),
+                        ty: 4,
+                        binding: Some(Location(
+                            location: 0,
+                            second_blend_source: false,
+                            interpolation: Some(Perspective),
+                            sampling: Some(Center),
+                        )),
+                        offset: 16,
+                    ),
+                    (
+                        name: Some("i_model_transpose_col1"),
+                        ty: 4,
+                        binding: Some(Location(
+                            location: 1,
+                            second_blend_source: false,
+                            interpolation: Some(Perspective),
+                            sampling: Some(Center),
+                        )),
+                        offset: 32,
+                    ),
+                    (
+                        name: Some("i_model_transpose_col2"),
+                        ty: 4,
+                        binding: Some(Location(
+                            location: 2,
+                            second_blend_source: false,
+                            interpolation: Some(Perspective),
+                            sampling: Some(Center),
+                        )),
+                        offset: 48,
+                    ),
+                    (
+                        name: Some("i_color"),
+                        ty: 4,
+                        binding: Some(Location(
+                            location: 3,
+                            second_blend_source: false,
+                            interpolation: Some(Perspective),
+                            sampling: Some(Center),
+                        )),
+                        offset: 64,
+                    ),
+                    (
+                        name: Some("i_uv_offset_scale"),
+                        ty: 4,
+                        binding: Some(Location(
+                            location: 4,
+                            second_blend_source: false,
+                            interpolation: Some(Perspective),
+                            sampling: Some(Center),
+                        )),
+                        offset: 80,
+                    ),
+                ],
+                span: 96,
+            ),
+        ),
+        (
+            name: Some("VertexOutput"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("clip_position"),
+                        ty: 4,
+                        binding: Some(BuiltIn(Position(
+                            invariant: false,
+                        ))),
+                        offset: 0,
+                    ),
+                    (
+                        name: Some("uv"),
+                        ty: 7,
+                        binding: Some(Location(
+                            location: 0,
+                            second_blend_source: false,
+                            interpolation: Some(Perspective),
+                            sampling: Some(Center),
+                        )),
+                        offset: 16,
+                    ),
+                    (
+                        name: Some("color"),
+                        ty: 4,
+                        binding: Some(Location(
+                            location: 1,
+                            second_blend_source: false,
+                            interpolation: Some(Flat),
+                            sampling: None,
+                        )),
+                        offset: 32,
+                    ),
+                ],
+                span: 48,
+            ),
+        ),
+        (
+            name: None,
+            inner: Image(
+                dim: D2,
+                arrayed: false,
+                class: Sampled(
+                    kind: Float,
+                    multi: false,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Sampler(
+                comparison: false,
+            ),
+        ),
+    ],
+    special_types: (
+        ray_desc: None,
+        ray_intersection: None,
+        predeclared_types: {},
+    ),
+    constants: [],
+    overrides: [],
+    global_variables: [
+        (
+            name: Some("viewX_naga_oil_mod_XMJSXM6K7ONYHE2LUMU5DU43QOJUXIZK7OZUWK527MJUW4ZDJNZTXGX"),
+            space: Uniform,
+            binding: Some((
+                group: 0,
+                binding: 0,
+            )),
+            ty: 9,
+            init: None,
+        ),
+        (
+            name: Some("sprite_texture"),
+            space: Handle,
+            binding: Some((
+                group: 1,
+                binding: 0,
+            )),
+            ty: 14,
+            init: None,
+        ),
+        (
+            name: Some("sprite_sampler"),
+            space: Handle,
+            binding: Some((
+                group: 1,
+                binding: 1,
+            )),
+            ty: 15,
+            init: None,
+        ),
+    ],
+    global_expressions: [],
+    functions: [
+        (
+            name: Some("affine3_to_squareX_naga_oil_mod_XMJSXM6K7OJSW4ZDFOI5DU3LBORUHGX"),
+            arguments: [
+                (
+                    name: Some("affine"),
+                    ty: 10,
+                    binding: None,
+                ),
+            ],
+            result: Some((
+                ty: 1,
+                binding: None,
+            )),
+            local_variables: [],
+            expressions: [
+                FunctionArgument(0),
+                AccessIndex(
+                    base: 1,
+                    index: 0,
+                ),
+                AccessIndex(
+                    base: 1,
+                    index: 1,
+                ),
+                AccessIndex(
+                    base: 1,
+                    index: 2,
+                ),
+                Literal(F32(0.0)),
+                Literal(F32(0.0)),
+                Literal(F32(0.0)),
+                Literal(F32(1.0)),
+                Compose(
+                    ty: 4,
+                    components: [
+                        5,
+                        6,
+                        7,
+                        8,
+                    ],
+                ),
+                Compose(
+                    ty: 1,
+                    components: [
+                        2,
+                        3,
+                        4,
+                        9,
+                    ],
+                ),
+                Math(
+                    fun: Transpose,
+                    arg: 10,
+                    arg1: None,
+                    arg2: None,
+                    arg3: None,
+                ),
+            ],
+            named_expressions: {
+                1: "affine",
+            },
+            body: [
+                Emit((
+                    start: 1,
+                    end: 2,
+                )),
+                Emit((
+                    start: 2,
+                    end: 3,
+                )),
+                Emit((
+                    start: 3,
+                    end: 4,
+                )),
+                Emit((
+                    start: 8,
+                    end: 11,
+                )),
+                Return(
+                    value: Some(11),
+                ),
+            ],
+        ),
+        (
+            name: Some("powsafeX_naga_oil_mod_XMJSXM6K7OJSW4ZDFOI5DU3LBORUHGX"),
+            arguments: [
+                (
+                    name: Some("color"),
+                    ty: 2,
+                    binding: None,
+                ),
+                (
+                    name: Some("power"),
+                    ty: 3,
+                    binding: None,
+                ),
+            ],
+            result: Some((
+                ty: 2,
+                binding: None,
+            )),
+            local_variables: [],
+            expressions: [
+                FunctionArgument(0),
+                FunctionArgument(1),
+                Math(
+                    fun: Abs,
+                    arg: 1,
+                    arg1: None,
+                    arg2: None,
+                    arg3: None,
+                ),
+                Splat(
+                    size: Tri,
+                    value: 2,
+                ),
+                Math(
+                    fun: Pow,
+                    arg: 3,
+                    arg1: Some(4),
+                    arg2: None,
+                    arg3: None,
+                ),
+                Math(
+                    fun: Sign,
+                    arg: 1,
+                    arg1: None,
+                    arg2: None,
+                    arg3: None,
+                ),
+                Binary(
+                    op: Multiply,
+                    left: 5,
+                    right: 6,
+                ),
+            ],
+            named_expressions: {
+                1: "color",
+                2: "power",
+            },
+            body: [
+                Emit((
+                    start: 2,
+                    end: 7,
+                )),
+                Return(
+                    value: Some(7),
+                ),
+            ],
+        ),
+        (
+            name: Some("tonemapping_luminanceX_naga_oil_mod_XMJSXM6K7MNXXEZK7OBUXAZLMNFXGKOR2ORXW4ZLNMFYHA2LOM4X"),
+            arguments: [
+                (
+                    name: Some("v"),
+                    ty: 2,
+                    binding: None,
+                ),
+            ],
+            result: Some((
+                ty: 3,
+                binding: None,
+            )),
+            local_variables: [],
+            expressions: [
+                Literal(F32(0.2126)),
+                Literal(F32(0.7152)),
+                Literal(F32(0.0722)),
+                FunctionArgument(0),
+                Compose(
+                    ty: 2,
+                    components: [
+                        1,
+                        2,
+                        3,
+                    ],
+                ),
+                Math(
+                    fun: Dot,
+                    arg: 4,
+                    arg1: Some(5),
+                    arg2: None,
+                    arg3: None,
+                ),
+            ],
+            named_expressions: {
+                4: "v",
+            },
+            body: [
+                Emit((
+                    start: 4,
+                    end: 6,
+                )),
+                Return(
+                    value: Some(6),
+                ),
+            ],
+        ),
+        (
+            name: Some("saturationX_naga_oil_mod_XMJSXM6K7MNXXEZK7OBUXAZLMNFXGKOR2ORXW4ZLNMFYHA2LOM4X"),
+            arguments: [
+                (
+                    name: Some("color"),
+                    ty: 2,
+                    binding: None,
+                ),
+                (
+                    name: Some("saturationAmount"),
+                    ty: 3,
+                    binding: None,
+                ),
+            ],
+            result: Some((
+                ty: 2,
+                binding: None,
+            )),
+            local_variables: [],
+            expressions: [
+                FunctionArgument(0),
+                CallResult(3),
+                FunctionArgument(1),
+                Splat(
+                    size: Tri,
+                    value: 2,
+                ),
+                Splat(
+                    size: Tri,
+                    value: 3,
+                ),
+                Math(
+                    fun: Mix,
+                    arg: 4,
+                    arg1: Some(1),
+                    arg2: Some(5),
+                    arg3: None,
+                ),
+            ],
+            named_expressions: {
+                1: "color",
+                3: "saturationAmount",
+                2: "luma",
+            },
+            body: [
+                Call(
+                    function: 3,
+                    arguments: [
+                        1,
+                    ],
+                    result: Some(2),
+                ),
+                Emit((
+                    start: 3,
+                    end: 6,
+                )),
+                Return(
+                    value: Some(6),
+                ),
+            ],
+        ),
+        (
+            name: Some("tone_mappingX_naga_oil_mod_XMJSXM6K7MNXXEZK7OBUXAZLMNFXGKOR2ORXW4ZLNMFYHA2LOM4X"),
+            arguments: [
+                (
+                    name: Some("in"),
+                    ty: 4,
+                    binding: None,
+                ),
+                (
+                    name: Some("in_color_grading"),
+                    ty: 8,
+                    binding: None,
+                ),
+            ],
+            result: Some((
+                ty: 4,
+                binding: None,
+            )),
+            local_variables: [
+                (
+                    name: Some("color"),
+                    ty: 2,
+                    init: None,
+                ),
+                (
+                    name: Some("color_grading"),
+                    ty: 8,
+                    init: None,
+                ),
+            ],
+            expressions: [
+                FunctionArgument(0),
+                Swizzle(
+                    size: Tri,
+                    vector: 1,
+                    pattern: (X, Y, Z, X),
+                ),
+                Literal(F32(0.0)),
+                Splat(
+                    size: Tri,
+                    value: 3,
+                ),
+                Math(
+                    fun: Max,
+                    arg: 2,
+                    arg1: Some(4),
+                    arg2: None,
+                    arg3: None,
+                ),
+                LocalVariable(1),
+                LocalVariable(2),
+                FunctionArgument(1),
+                Load(
+                    pointer: 6,
+                ),
+                Literal(F32(2.0)),
+                Splat(
+                    size: Tri,
+                    value: 10,
+                ),
+                AccessIndex(
+                    base: 7,
+                    index: 7,
+                ),
+                Load(
+                    pointer: 12,
+                ),
+                CallResult(2),
+                Binary(
+                    op: Multiply,
+                    left: 9,
+                    right: 14,
+                ),
+                Load(
+                    pointer: 6,
+                ),
+                Load(
+                    pointer: 6,
+                ),
+                AccessIndex(
+                    base: 7,
+                    index: 9,
+                ),
+                Load(
+                    pointer: 18,
+                ),
+                CallResult(4),
+                Load(
+                    pointer: 6,
+                ),
+                AccessIndex(
+                    base: 1,
+                    index: 3,
+                ),
+                Compose(
+                    ty: 4,
+                    components: [
+                        21,
+                        22,
+                    ],
+                ),
+            ],
+            named_expressions: {
+                1: "in",
+                8: "in_color_grading",
+            },
+            body: [
+                Emit((
+                    start: 1,
+                    end: 2,
+                )),
+                Emit((
+                    start: 2,
+                    end: 2,
+                )),
+                Emit((
+                    start: 3,
+                    end: 5,
+                )),
+                Store(
+                    pointer: 6,
+                    value: 5,
+                ),
+                Store(
+                    pointer: 7,
+                    value: 8,
+                ),
+                Emit((
+                    start: 8,
+                    end: 9,
+                )),
+                Emit((
+                    start: 9,
+                    end: 9,
+                )),
+                Emit((
+                    start: 10,
+                    end: 13,
+                )),
+                Call(
+                    function: 2,
+                    arguments: [
+                        11,
+                        13,
+                    ],
+                    result: Some(14),
+                ),
+                Emit((
+                    start: 14,
+                    end: 15,
+                )),
+                Store(
+                    pointer: 6,
+                    value: 15,
+                ),
+                Emit((
+                    start: 15,
+                    end: 16,
+                )),
+                Store(
+                    pointer: 6,
+                    value: 16,
+                ),
+                Emit((
+                    start: 16,
+                    end: 19,
+                )),
+                Call(
+                    function: 4,
+                    arguments: [
+                        17,
+                        19,
+                    ],
+                    result: Some(20),
+                ),
+                Store(
+                    pointer: 6,
+                    value: 20,
+                ),
+                Emit((
+                    start: 20,
+                    end: 23,
+                )),
+                Return(
+                    value: Some(23),
+                ),
+            ],
+        ),
+    ],
+    entry_points: [
+        (
+            name: "vertex",
+            stage: Vertex,
+            early_depth_test: None,
+            workgroup_size: (0, 0, 0),
+            function: (
+                name: Some("vertex"),
+                arguments: [
+                    (
+                        name: Some("in"),
+                        ty: 12,
+                        binding: None,
+                    ),
+                ],
+                result: Some((
+                    ty: 13,
+                    binding: None,
+                )),
+                local_variables: [
+                    (
+                        name: Some("out"),
+                        ty: 13,
+                        init: None,
+                    ),
+                ],
+                expressions: [
+                    FunctionArgument(0),
+                    AccessIndex(
+                        base: 1,
+                        index: 0,
+                    ),
+                    Literal(U32(1)),
+                    Binary(
+                        op: And,
+                        left: 2,
+                        right: 3,
+                    ),
+                    As(
+                        expr: 4,
+                        kind: Float,
+                        convert: Some(4),
+                    ),
+                    AccessIndex(
+                        base: 1,
+                        index: 0,
+                    ),
+                    Literal(U32(2)),
+                    Binary(
+                        op: And,
+                        left: 6,
+                        right: 7,
+                    ),
+                    Literal(U32(1)),
+                    Binary(
+                        op: ShiftRight,
+                        left: 8,
+                        right: 9,
+                    ),
+                    As(
+                        expr: 10,
+                        kind: Float,
+                        convert: Some(4),
+                    ),
+                    Literal(F32(0.0)),
+                    Compose(
+                        ty: 2,
+                        components: [
+                            5,
+                            11,
+                            12,
+                        ],
+                    ),
+                    LocalVariable(1),
+                    AccessIndex(
+                        base: 14,
+                        index: 0,
+                    ),
+                    GlobalVariable(1),
+                    AccessIndex(
+                        base: 16,
+                        index: 0,
+                    ),
+                    Load(
+                        pointer: 17,
+                    ),
+                    AccessIndex(
+                        base: 1,
+                        index: 1,
+                    ),
+                    AccessIndex(
+                        base: 1,
+                        index: 2,
+                    ),
+                    AccessIndex(
+                        base: 1,
+                        index: 3,
+                    ),
+                    Compose(
+                        ty: 10,
+                        components: [
+                            19,
+                            20,
+                            21,
+                        ],
+                    ),
+                    CallResult(1),
+                    Binary(
+                        op: Multiply,
+                        left: 18,
+                        right: 23,
+                    ),
+                    Literal(F32(1.0)),
+                    Compose(
+                        ty: 4,
+                        components: [
+                            13,
+                            25,
+                        ],
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 24,
+                        right: 26,
+                    ),
+                    AccessIndex(
+                        base: 14,
+                        index: 1,
+                    ),
+                    Swizzle(
+                        size: Bi,
+                        vector: 13,
+                        pattern: (X, Y, X, X),
+                    ),
+                    As(
+                        expr: 29,
+                        kind: Float,
+                        convert: Some(4),
+                    ),
+                    AccessIndex(
+                        base: 1,
+                        index: 5,
+                    ),
+                    Swizzle(
+                        size: Bi,
+                        vector: 31,
+                        pattern: (Z, W, X, X),
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 30,
+                        right: 32,
+                    ),
+                    AccessIndex(
+                        base: 1,
+                        index: 5,
+                    ),
+                    Swizzle(
+                        size: Bi,
+                        vector: 34,
+                        pattern: (X, Y, X, X),
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 33,
+                        right: 35,
+                    ),
+                    AccessIndex(
+                        base: 14,
+                        index: 2,
+                    ),
+                    AccessIndex(
+                        base: 1,
+                        index: 4,
+                    ),
+                    Load(
+                        pointer: 14,
+                    ),
+                ],
+                named_expressions: {
+                    1: "in",
+                    13: "vertex_position",
+                },
+                body: [
+                    Emit((
+                        start: 1,
+                        end: 2,
+                    )),
+                    Emit((
+                        start: 3,
+                        end: 6,
+                    )),
+                    Emit((
+                        start: 7,
+                        end: 8,
+                    )),
+                    Emit((
+                        start: 9,
+                        end: 11,
+                    )),
+                    Emit((
+                        start: 12,
+                        end: 13,
+                    )),
+                    Emit((
+                        start: 14,
+                        end: 15,
+                    )),
+                    Emit((
+                        start: 16,
+                        end: 22,
+                    )),
+                    Call(
+                        function: 1,
+                        arguments: [
+                            22,
+                        ],
+                        result: Some(23),
+                    ),
+                    Emit((
+                        start: 23,
+                        end: 24,
+                    )),
+                    Emit((
+                        start: 25,
+                        end: 27,
+                    )),
+                    Store(
+                        pointer: 15,
+                        value: 27,
+                    ),
+                    Emit((
+                        start: 27,
+                        end: 36,
+                    )),
+                    Store(
+                        pointer: 28,
+                        value: 36,
+                    ),
+                    Emit((
+                        start: 36,
+                        end: 38,
+                    )),
+                    Store(
+                        pointer: 37,
+                        value: 38,
+                    ),
+                    Emit((
+                        start: 38,
+                        end: 39,
+                    )),
+                    Return(
+                        value: Some(39),
+                    ),
+                ],
+            ),
+        ),
+        (
+            name: "fragment",
+            stage: Fragment,
+            early_depth_test: None,
+            workgroup_size: (0, 0, 0),
+            function: (
+                name: Some("fragment"),
+                arguments: [
+                    (
+                        name: Some("in"),
+                        ty: 13,
+                        binding: None,
+                    ),
+                ],
+                result: Some((
+                    ty: 4,
+                    binding: Some(Location(
+                        location: 0,
+                        second_blend_source: false,
+                        interpolation: Some(Perspective),
+                        sampling: Some(Center),
+                    )),
+                )),
+                local_variables: [
+                    (
+                        name: Some("color"),
+                        ty: 4,
+                        init: None,
+                    ),
+                ],
+                expressions: [
+                    FunctionArgument(0),
+                    AccessIndex(
+                        base: 1,
+                        index: 2,
+                    ),
+                    GlobalVariable(2),
+                    GlobalVariable(3),
+                    AccessIndex(
+                        base: 1,
+                        index: 1,
+                    ),
+                    ImageSample(
+                        image: 3,
+                        sampler: 4,
+                        gather: None,
+                        coordinate: 5,
+                        array_index: None,
+                        offset: None,
+                        level: Auto,
+                        depth_ref: None,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 2,
+                        right: 6,
+                    ),
+                    LocalVariable(1),
+                    Load(
+                        pointer: 8,
+                    ),
+                    GlobalVariable(1),
+                    AccessIndex(
+                        base: 10,
+                        index: 11,
+                    ),
+                    Load(
+                        pointer: 11,
+                    ),
+                    CallResult(5),
+                    Load(
+                        pointer: 8,
+                    ),
+                ],
+                named_expressions: {
+                    1: "in",
+                },
+                body: [
+                    Emit((
+                        start: 1,
+                        end: 2,
+                    )),
+                    Emit((
+                        start: 4,
+                        end: 7,
+                    )),
+                    Store(
+                        pointer: 8,
+                        value: 7,
+                    ),
+                    Emit((
+                        start: 8,
+                        end: 9,
+                    )),
+                    Emit((
+                        start: 10,
+                        end: 12,
+                    )),
+                    Call(
+                        function: 5,
+                        arguments: [
+                            9,
+                            12,
+                        ],
+                        result: Some(13),
+                    ),
+                    Store(
+                        pointer: 8,
+                        value: 13,
+                    ),
+                    Emit((
+                        start: 13,
+                        end: 14,
+                    )),
+                    Return(
+                        value: Some(14),
+                    ),
+                ],
+            ),
+        ),
+    ],
+)

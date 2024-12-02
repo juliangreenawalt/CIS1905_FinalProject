@@ -1,0 +1,158 @@
+(
+    types: [
+        (
+            name: None,
+            inner: Vector(
+                size: Quad,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Bi,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: Some("FullscreenVertexOutputX_naga_oil_mod_XMJSXM6K7MNXXEZK7OBUXAZLMNFXGKOR2MZ2WY3DTMNZGKZLOL53GK4TUMV4F643IMFSGK4QX"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("position"),
+                        ty: 1,
+                        binding: Some(BuiltIn(Position(
+                            invariant: false,
+                        ))),
+                        offset: 0,
+                    ),
+                    (
+                        name: Some("uv"),
+                        ty: 2,
+                        binding: Some(Location(
+                            location: 0,
+                            second_blend_source: false,
+                            interpolation: Some(Perspective),
+                            sampling: Some(Center),
+                        )),
+                        offset: 16,
+                    ),
+                ],
+                span: 32,
+            ),
+        ),
+        (
+            name: None,
+            inner: Image(
+                dim: D2,
+                arrayed: false,
+                class: Sampled(
+                    kind: Float,
+                    multi: false,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Sampler(
+                comparison: false,
+            ),
+        ),
+    ],
+    special_types: (
+        ray_desc: None,
+        ray_intersection: None,
+        predeclared_types: {},
+    ),
+    constants: [],
+    overrides: [],
+    global_variables: [
+        (
+            name: Some("in_texture"),
+            space: Handle,
+            binding: Some((
+                group: 0,
+                binding: 0,
+            )),
+            ty: 4,
+            init: None,
+        ),
+        (
+            name: Some("in_sampler"),
+            space: Handle,
+            binding: Some((
+                group: 0,
+                binding: 1,
+            )),
+            ty: 5,
+            init: None,
+        ),
+    ],
+    global_expressions: [],
+    functions: [],
+    entry_points: [
+        (
+            name: "fs_main",
+            stage: Fragment,
+            early_depth_test: None,
+            workgroup_size: (0, 0, 0),
+            function: (
+                name: Some("fs_main"),
+                arguments: [
+                    (
+                        name: Some("in"),
+                        ty: 3,
+                        binding: None,
+                    ),
+                ],
+                result: Some((
+                    ty: 1,
+                    binding: Some(Location(
+                        location: 0,
+                        second_blend_source: false,
+                        interpolation: Some(Perspective),
+                        sampling: Some(Center),
+                    )),
+                )),
+                local_variables: [],
+                expressions: [
+                    FunctionArgument(0),
+                    GlobalVariable(1),
+                    GlobalVariable(2),
+                    AccessIndex(
+                        base: 1,
+                        index: 1,
+                    ),
+                    ImageSample(
+                        image: 2,
+                        sampler: 3,
+                        gather: None,
+                        coordinate: 4,
+                        array_index: None,
+                        offset: None,
+                        level: Auto,
+                        depth_ref: None,
+                    ),
+                ],
+                named_expressions: {
+                    1: "in",
+                },
+                body: [
+                    Emit((
+                        start: 3,
+                        end: 5,
+                    )),
+                    Return(
+                        value: Some(5),
+                    ),
+                ],
+            ),
+        ),
+    ],
+)

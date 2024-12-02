@@ -1,0 +1,1343 @@
+(
+    types: [
+        (
+            name: None,
+            inner: Matrix(
+                columns: Quad,
+                rows: Quad,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Tri,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Scalar((
+                kind: Float,
+                width: 4,
+            )),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Quad,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Array(
+                base: 4,
+                size: Constant(6),
+                stride: 16,
+            ),
+        ),
+        (
+            name: None,
+            inner: Matrix(
+                columns: Tri,
+                rows: Tri,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Bi,
+                scalar: (
+                    kind: Float,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: Some("ColorGradingX_naga_oil_mod_XMJSXM6K7OJSW4ZDFOI5DU5TJMV3QX"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("balance"),
+                        ty: 6,
+                        binding: None,
+                        offset: 0,
+                    ),
+                    (
+                        name: Some("saturation"),
+                        ty: 2,
+                        binding: None,
+                        offset: 48,
+                    ),
+                    (
+                        name: Some("contrast"),
+                        ty: 2,
+                        binding: None,
+                        offset: 64,
+                    ),
+                    (
+                        name: Some("gamma"),
+                        ty: 2,
+                        binding: None,
+                        offset: 80,
+                    ),
+                    (
+                        name: Some("gain"),
+                        ty: 2,
+                        binding: None,
+                        offset: 96,
+                    ),
+                    (
+                        name: Some("lift"),
+                        ty: 2,
+                        binding: None,
+                        offset: 112,
+                    ),
+                    (
+                        name: Some("midtone_range"),
+                        ty: 7,
+                        binding: None,
+                        offset: 128,
+                    ),
+                    (
+                        name: Some("exposure"),
+                        ty: 3,
+                        binding: None,
+                        offset: 136,
+                    ),
+                    (
+                        name: Some("hue"),
+                        ty: 3,
+                        binding: None,
+                        offset: 140,
+                    ),
+                    (
+                        name: Some("post_saturation"),
+                        ty: 3,
+                        binding: None,
+                        offset: 144,
+                    ),
+                ],
+                span: 160,
+            ),
+        ),
+        (
+            name: Some("ViewX_naga_oil_mod_XMJSXM6K7OJSW4ZDFOI5DU5TJMV3QX"),
+            inner: Struct(
+                members: [
+                    (
+                        name: Some("clip_from_world"),
+                        ty: 1,
+                        binding: None,
+                        offset: 0,
+                    ),
+                    (
+                        name: Some("unjittered_clip_from_world"),
+                        ty: 1,
+                        binding: None,
+                        offset: 64,
+                    ),
+                    (
+                        name: Some("world_from_clip"),
+                        ty: 1,
+                        binding: None,
+                        offset: 128,
+                    ),
+                    (
+                        name: Some("world_from_view"),
+                        ty: 1,
+                        binding: None,
+                        offset: 192,
+                    ),
+                    (
+                        name: Some("view_from_world"),
+                        ty: 1,
+                        binding: None,
+                        offset: 256,
+                    ),
+                    (
+                        name: Some("clip_from_view"),
+                        ty: 1,
+                        binding: None,
+                        offset: 320,
+                    ),
+                    (
+                        name: Some("view_from_clip"),
+                        ty: 1,
+                        binding: None,
+                        offset: 384,
+                    ),
+                    (
+                        name: Some("world_position"),
+                        ty: 2,
+                        binding: None,
+                        offset: 448,
+                    ),
+                    (
+                        name: Some("exposure"),
+                        ty: 3,
+                        binding: None,
+                        offset: 460,
+                    ),
+                    (
+                        name: Some("viewport"),
+                        ty: 4,
+                        binding: None,
+                        offset: 464,
+                    ),
+                    (
+                        name: Some("frustum"),
+                        ty: 5,
+                        binding: None,
+                        offset: 480,
+                    ),
+                    (
+                        name: Some("color_grading"),
+                        ty: 8,
+                        binding: None,
+                        offset: 576,
+                    ),
+                    (
+                        name: Some("mip_bias"),
+                        ty: 3,
+                        binding: None,
+                        offset: 736,
+                    ),
+                ],
+                span: 752,
+            ),
+        ),
+        (
+            name: None,
+            inner: Image(
+                dim: D2,
+                arrayed: false,
+                class: Sampled(
+                    kind: Float,
+                    multi: false,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Image(
+                dim: D2,
+                arrayed: false,
+                class: Sampled(
+                    kind: Uint,
+                    multi: false,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Image(
+                dim: D2,
+                arrayed: false,
+                class: Storage(
+                    format: R16Float,
+                    access: ("STORE"),
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Sampler(
+                comparison: false,
+            ),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Tri,
+                scalar: (
+                    kind: Uint,
+                    width: 4,
+                ),
+            ),
+        ),
+        (
+            name: None,
+            inner: Vector(
+                size: Bi,
+                scalar: (
+                    kind: Sint,
+                    width: 4,
+                ),
+            ),
+        ),
+    ],
+    special_types: (
+        ray_desc: None,
+        ray_intersection: None,
+        predeclared_types: {},
+    ),
+    constants: [],
+    overrides: [],
+    global_variables: [
+        (
+            name: Some("ambient_occlusion_noisy"),
+            space: Handle,
+            binding: Some((
+                group: 0,
+                binding: 0,
+            )),
+            ty: 10,
+            init: None,
+        ),
+        (
+            name: Some("depth_differences"),
+            space: Handle,
+            binding: Some((
+                group: 0,
+                binding: 1,
+            )),
+            ty: 11,
+            init: None,
+        ),
+        (
+            name: Some("ambient_occlusion"),
+            space: Handle,
+            binding: Some((
+                group: 0,
+                binding: 2,
+            )),
+            ty: 12,
+            init: None,
+        ),
+        (
+            name: Some("point_clamp_sampler"),
+            space: Handle,
+            binding: Some((
+                group: 1,
+                binding: 0,
+            )),
+            ty: 13,
+            init: None,
+        ),
+        (
+            name: Some("view"),
+            space: Uniform,
+            binding: Some((
+                group: 1,
+                binding: 1,
+            )),
+            ty: 9,
+            init: None,
+        ),
+    ],
+    global_expressions: [
+        Literal(I32(2)),
+        Literal(I32(0)),
+        Compose(
+            ty: 15,
+            components: [
+                1,
+                2,
+            ],
+        ),
+        Literal(I32(1)),
+        Compose(
+            ty: 15,
+            components: [
+                4,
+                1,
+            ],
+        ),
+        Compose(
+            ty: 15,
+            components: [
+                2,
+                1,
+            ],
+        ),
+        Compose(
+            ty: 15,
+            components: [
+                1,
+                1,
+            ],
+        ),
+    ],
+    functions: [],
+    entry_points: [
+        (
+            name: "spatial_denoise",
+            stage: Compute,
+            early_depth_test: None,
+            workgroup_size: (8, 8, 1),
+            function: (
+                name: Some("spatial_denoise"),
+                arguments: [
+                    (
+                        name: Some("global_id"),
+                        ty: 14,
+                        binding: Some(BuiltIn(GlobalInvocationId)),
+                    ),
+                ],
+                result: None,
+                local_variables: [
+                    (
+                        name: Some("center_edges"),
+                        ty: 4,
+                        init: None,
+                    ),
+                    (
+                        name: Some("sum"),
+                        ty: 3,
+                        init: None,
+                    ),
+                    (
+                        name: Some("sum_weight"),
+                        ty: 3,
+                        init: None,
+                    ),
+                ],
+                expressions: [
+                    FunctionArgument(0),
+                    Swizzle(
+                        size: Bi,
+                        vector: 1,
+                        pattern: (X, Y, X, X),
+                    ),
+                    As(
+                        expr: 2,
+                        kind: Sint,
+                        convert: Some(4),
+                    ),
+                    As(
+                        expr: 3,
+                        kind: Float,
+                        convert: Some(4),
+                    ),
+                    GlobalVariable(5),
+                    AccessIndex(
+                        base: 5,
+                        index: 9,
+                    ),
+                    Load(
+                        pointer: 6,
+                    ),
+                    Swizzle(
+                        size: Bi,
+                        vector: 7,
+                        pattern: (Z, W, X, X),
+                    ),
+                    Binary(
+                        op: Divide,
+                        left: 4,
+                        right: 8,
+                    ),
+                    GlobalVariable(2),
+                    GlobalVariable(4),
+                    ImageSample(
+                        image: 10,
+                        sampler: 11,
+                        gather: Some(X),
+                        coordinate: 9,
+                        array_index: None,
+                        offset: None,
+                        level: Zero,
+                        depth_ref: None,
+                    ),
+                    GlobalVariable(2),
+                    GlobalVariable(4),
+                    ImageSample(
+                        image: 13,
+                        sampler: 14,
+                        gather: Some(X),
+                        coordinate: 9,
+                        array_index: None,
+                        offset: Some(3),
+                        level: Zero,
+                        depth_ref: None,
+                    ),
+                    GlobalVariable(2),
+                    GlobalVariable(4),
+                    ImageSample(
+                        image: 16,
+                        sampler: 17,
+                        gather: Some(X),
+                        coordinate: 9,
+                        array_index: None,
+                        offset: Some(5),
+                        level: Zero,
+                        depth_ref: None,
+                    ),
+                    GlobalVariable(1),
+                    GlobalVariable(4),
+                    ImageSample(
+                        image: 19,
+                        sampler: 20,
+                        gather: Some(X),
+                        coordinate: 9,
+                        array_index: None,
+                        offset: None,
+                        level: Zero,
+                        depth_ref: None,
+                    ),
+                    GlobalVariable(1),
+                    GlobalVariable(4),
+                    ImageSample(
+                        image: 22,
+                        sampler: 23,
+                        gather: Some(X),
+                        coordinate: 9,
+                        array_index: None,
+                        offset: Some(3),
+                        level: Zero,
+                        depth_ref: None,
+                    ),
+                    GlobalVariable(1),
+                    GlobalVariable(4),
+                    ImageSample(
+                        image: 25,
+                        sampler: 26,
+                        gather: Some(X),
+                        coordinate: 9,
+                        array_index: None,
+                        offset: Some(6),
+                        level: Zero,
+                        depth_ref: None,
+                    ),
+                    GlobalVariable(1),
+                    GlobalVariable(4),
+                    ImageSample(
+                        image: 28,
+                        sampler: 29,
+                        gather: Some(X),
+                        coordinate: 9,
+                        array_index: None,
+                        offset: Some(7),
+                        level: Zero,
+                        depth_ref: None,
+                    ),
+                    AccessIndex(
+                        base: 12,
+                        index: 0,
+                    ),
+                    Math(
+                        fun: Unpack4x8unorm,
+                        arg: 31,
+                        arg1: None,
+                        arg2: None,
+                        arg3: None,
+                    ),
+                    AccessIndex(
+                        base: 15,
+                        index: 0,
+                    ),
+                    Math(
+                        fun: Unpack4x8unorm,
+                        arg: 33,
+                        arg1: None,
+                        arg2: None,
+                        arg3: None,
+                    ),
+                    AccessIndex(
+                        base: 12,
+                        index: 2,
+                    ),
+                    Math(
+                        fun: Unpack4x8unorm,
+                        arg: 35,
+                        arg1: None,
+                        arg2: None,
+                        arg3: None,
+                    ),
+                    AccessIndex(
+                        base: 18,
+                        index: 3,
+                    ),
+                    Math(
+                        fun: Unpack4x8unorm,
+                        arg: 37,
+                        arg1: None,
+                        arg2: None,
+                        arg3: None,
+                    ),
+                    AccessIndex(
+                        base: 12,
+                        index: 1,
+                    ),
+                    Math(
+                        fun: Unpack4x8unorm,
+                        arg: 39,
+                        arg1: None,
+                        arg2: None,
+                        arg3: None,
+                    ),
+                    LocalVariable(1),
+                    AccessIndex(
+                        base: 32,
+                        index: 1,
+                    ),
+                    AccessIndex(
+                        base: 34,
+                        index: 0,
+                    ),
+                    AccessIndex(
+                        base: 36,
+                        index: 3,
+                    ),
+                    AccessIndex(
+                        base: 38,
+                        index: 2,
+                    ),
+                    Compose(
+                        ty: 4,
+                        components: [
+                            42,
+                            43,
+                            44,
+                            45,
+                        ],
+                    ),
+                    Load(
+                        pointer: 41,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 47,
+                        right: 46,
+                    ),
+                    AccessIndex(
+                        base: 41,
+                        index: 0,
+                    ),
+                    Load(
+                        pointer: 49,
+                    ),
+                    AccessIndex(
+                        base: 41,
+                        index: 1,
+                    ),
+                    Load(
+                        pointer: 51,
+                    ),
+                    AccessIndex(
+                        base: 41,
+                        index: 2,
+                    ),
+                    Load(
+                        pointer: 53,
+                    ),
+                    AccessIndex(
+                        base: 41,
+                        index: 3,
+                    ),
+                    Load(
+                        pointer: 55,
+                    ),
+                    AccessIndex(
+                        base: 36,
+                        index: 0,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 54,
+                        right: 57,
+                    ),
+                    AccessIndex(
+                        base: 32,
+                        index: 2,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 50,
+                        right: 59,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 58,
+                        right: 60,
+                    ),
+                    Literal(F32(0.425)),
+                    Binary(
+                        op: Multiply,
+                        left: 62,
+                        right: 61,
+                    ),
+                    AccessIndex(
+                        base: 36,
+                        index: 1,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 54,
+                        right: 64,
+                    ),
+                    AccessIndex(
+                        base: 34,
+                        index: 2,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 52,
+                        right: 66,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 65,
+                        right: 67,
+                    ),
+                    Literal(F32(0.425)),
+                    Binary(
+                        op: Multiply,
+                        left: 69,
+                        right: 68,
+                    ),
+                    AccessIndex(
+                        base: 38,
+                        index: 0,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 56,
+                        right: 71,
+                    ),
+                    AccessIndex(
+                        base: 32,
+                        index: 3,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 50,
+                        right: 73,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 72,
+                        right: 74,
+                    ),
+                    Literal(F32(0.425)),
+                    Binary(
+                        op: Multiply,
+                        left: 76,
+                        right: 75,
+                    ),
+                    AccessIndex(
+                        base: 38,
+                        index: 1,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 56,
+                        right: 78,
+                    ),
+                    AccessIndex(
+                        base: 34,
+                        index: 3,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 52,
+                        right: 80,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 79,
+                        right: 81,
+                    ),
+                    Literal(F32(0.425)),
+                    Binary(
+                        op: Multiply,
+                        left: 83,
+                        right: 82,
+                    ),
+                    AccessIndex(
+                        base: 21,
+                        index: 1,
+                    ),
+                    AccessIndex(
+                        base: 21,
+                        index: 0,
+                    ),
+                    AccessIndex(
+                        base: 21,
+                        index: 2,
+                    ),
+                    AccessIndex(
+                        base: 24,
+                        index: 0,
+                    ),
+                    AccessIndex(
+                        base: 27,
+                        index: 2,
+                    ),
+                    AccessIndex(
+                        base: 21,
+                        index: 3,
+                    ),
+                    AccessIndex(
+                        base: 24,
+                        index: 3,
+                    ),
+                    AccessIndex(
+                        base: 27,
+                        index: 3,
+                    ),
+                    AccessIndex(
+                        base: 30,
+                        index: 3,
+                    ),
+                    LocalVariable(2),
+                    Binary(
+                        op: Multiply,
+                        left: 86,
+                        right: 50,
+                    ),
+                    Load(
+                        pointer: 94,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 96,
+                        right: 95,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 87,
+                        right: 52,
+                    ),
+                    Load(
+                        pointer: 94,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 99,
+                        right: 98,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 88,
+                        right: 54,
+                    ),
+                    Load(
+                        pointer: 94,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 102,
+                        right: 101,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 89,
+                        right: 56,
+                    ),
+                    Load(
+                        pointer: 94,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 105,
+                        right: 104,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 90,
+                        right: 63,
+                    ),
+                    Load(
+                        pointer: 94,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 108,
+                        right: 107,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 91,
+                        right: 70,
+                    ),
+                    Load(
+                        pointer: 94,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 111,
+                        right: 110,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 92,
+                        right: 77,
+                    ),
+                    Load(
+                        pointer: 94,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 114,
+                        right: 113,
+                    ),
+                    Binary(
+                        op: Multiply,
+                        left: 93,
+                        right: 84,
+                    ),
+                    Load(
+                        pointer: 94,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 117,
+                        right: 116,
+                    ),
+                    LocalVariable(3),
+                    Literal(F32(1.2)),
+                    Load(
+                        pointer: 119,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 121,
+                        right: 50,
+                    ),
+                    Load(
+                        pointer: 119,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 123,
+                        right: 52,
+                    ),
+                    Load(
+                        pointer: 119,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 125,
+                        right: 54,
+                    ),
+                    Load(
+                        pointer: 119,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 127,
+                        right: 56,
+                    ),
+                    Load(
+                        pointer: 119,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 129,
+                        right: 63,
+                    ),
+                    Load(
+                        pointer: 119,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 131,
+                        right: 70,
+                    ),
+                    Load(
+                        pointer: 119,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 133,
+                        right: 77,
+                    ),
+                    Load(
+                        pointer: 119,
+                    ),
+                    Binary(
+                        op: Add,
+                        left: 135,
+                        right: 84,
+                    ),
+                    Load(
+                        pointer: 94,
+                    ),
+                    Load(
+                        pointer: 119,
+                    ),
+                    Binary(
+                        op: Divide,
+                        left: 137,
+                        right: 138,
+                    ),
+                    Literal(F32(0.0)),
+                    Literal(F32(0.0)),
+                    Literal(F32(0.0)),
+                    Compose(
+                        ty: 4,
+                        components: [
+                            139,
+                            140,
+                            141,
+                            142,
+                        ],
+                    ),
+                    GlobalVariable(3),
+                ],
+                named_expressions: {
+                    1: "global_id",
+                    3: "pixel_coordinates",
+                    9: "uv",
+                    12: "edges0",
+                    15: "edges1",
+                    18: "edges2",
+                    21: "visibility0",
+                    24: "visibility1",
+                    27: "visibility2",
+                    30: "visibility3",
+                    32: "left_edges",
+                    34: "right_edges",
+                    36: "top_edges",
+                    38: "bottom_edges",
+                    120: "center_weight",
+                    50: "left_weight",
+                    52: "right_weight",
+                    54: "top_weight",
+                    56: "bottom_weight",
+                    63: "top_left_weight",
+                    70: "top_right_weight",
+                    77: "bottom_left_weight",
+                    84: "bottom_right_weight",
+                    85: "center_visibility",
+                    86: "left_visibility",
+                    87: "right_visibility",
+                    88: "top_visibility",
+                    89: "bottom_visibility",
+                    90: "top_left_visibility",
+                    91: "top_right_visibility",
+                    92: "bottom_left_visibility",
+                    93: "bottom_right_visibility",
+                    139: "denoised_visibility",
+                },
+                body: [
+                    Emit((
+                        start: 1,
+                        end: 3,
+                    )),
+                    Emit((
+                        start: 3,
+                        end: 4,
+                    )),
+                    Emit((
+                        start: 5,
+                        end: 9,
+                    )),
+                    Emit((
+                        start: 11,
+                        end: 12,
+                    )),
+                    Emit((
+                        start: 14,
+                        end: 15,
+                    )),
+                    Emit((
+                        start: 17,
+                        end: 18,
+                    )),
+                    Emit((
+                        start: 20,
+                        end: 21,
+                    )),
+                    Emit((
+                        start: 23,
+                        end: 24,
+                    )),
+                    Emit((
+                        start: 26,
+                        end: 27,
+                    )),
+                    Emit((
+                        start: 29,
+                        end: 30,
+                    )),
+                    Emit((
+                        start: 30,
+                        end: 32,
+                    )),
+                    Emit((
+                        start: 32,
+                        end: 34,
+                    )),
+                    Emit((
+                        start: 34,
+                        end: 36,
+                    )),
+                    Emit((
+                        start: 36,
+                        end: 38,
+                    )),
+                    Emit((
+                        start: 38,
+                        end: 40,
+                    )),
+                    Store(
+                        pointer: 41,
+                        value: 40,
+                    ),
+                    Emit((
+                        start: 41,
+                        end: 48,
+                    )),
+                    Store(
+                        pointer: 41,
+                        value: 48,
+                    ),
+                    Emit((
+                        start: 48,
+                        end: 50,
+                    )),
+                    Emit((
+                        start: 50,
+                        end: 52,
+                    )),
+                    Emit((
+                        start: 52,
+                        end: 54,
+                    )),
+                    Emit((
+                        start: 54,
+                        end: 56,
+                    )),
+                    Emit((
+                        start: 56,
+                        end: 61,
+                    )),
+                    Emit((
+                        start: 62,
+                        end: 63,
+                    )),
+                    Emit((
+                        start: 63,
+                        end: 68,
+                    )),
+                    Emit((
+                        start: 69,
+                        end: 70,
+                    )),
+                    Emit((
+                        start: 70,
+                        end: 75,
+                    )),
+                    Emit((
+                        start: 76,
+                        end: 77,
+                    )),
+                    Emit((
+                        start: 77,
+                        end: 82,
+                    )),
+                    Emit((
+                        start: 83,
+                        end: 84,
+                    )),
+                    Emit((
+                        start: 84,
+                        end: 85,
+                    )),
+                    Emit((
+                        start: 85,
+                        end: 86,
+                    )),
+                    Emit((
+                        start: 86,
+                        end: 87,
+                    )),
+                    Emit((
+                        start: 87,
+                        end: 88,
+                    )),
+                    Emit((
+                        start: 88,
+                        end: 89,
+                    )),
+                    Emit((
+                        start: 89,
+                        end: 90,
+                    )),
+                    Emit((
+                        start: 90,
+                        end: 91,
+                    )),
+                    Emit((
+                        start: 91,
+                        end: 92,
+                    )),
+                    Emit((
+                        start: 92,
+                        end: 93,
+                    )),
+                    Store(
+                        pointer: 94,
+                        value: 85,
+                    ),
+                    Emit((
+                        start: 94,
+                        end: 97,
+                    )),
+                    Store(
+                        pointer: 94,
+                        value: 97,
+                    ),
+                    Emit((
+                        start: 97,
+                        end: 100,
+                    )),
+                    Store(
+                        pointer: 94,
+                        value: 100,
+                    ),
+                    Emit((
+                        start: 100,
+                        end: 103,
+                    )),
+                    Store(
+                        pointer: 94,
+                        value: 103,
+                    ),
+                    Emit((
+                        start: 103,
+                        end: 106,
+                    )),
+                    Store(
+                        pointer: 94,
+                        value: 106,
+                    ),
+                    Emit((
+                        start: 106,
+                        end: 109,
+                    )),
+                    Store(
+                        pointer: 94,
+                        value: 109,
+                    ),
+                    Emit((
+                        start: 109,
+                        end: 112,
+                    )),
+                    Store(
+                        pointer: 94,
+                        value: 112,
+                    ),
+                    Emit((
+                        start: 112,
+                        end: 115,
+                    )),
+                    Store(
+                        pointer: 94,
+                        value: 115,
+                    ),
+                    Emit((
+                        start: 115,
+                        end: 118,
+                    )),
+                    Store(
+                        pointer: 94,
+                        value: 118,
+                    ),
+                    Store(
+                        pointer: 119,
+                        value: 120,
+                    ),
+                    Emit((
+                        start: 120,
+                        end: 122,
+                    )),
+                    Store(
+                        pointer: 119,
+                        value: 122,
+                    ),
+                    Emit((
+                        start: 122,
+                        end: 124,
+                    )),
+                    Store(
+                        pointer: 119,
+                        value: 124,
+                    ),
+                    Emit((
+                        start: 124,
+                        end: 126,
+                    )),
+                    Store(
+                        pointer: 119,
+                        value: 126,
+                    ),
+                    Emit((
+                        start: 126,
+                        end: 128,
+                    )),
+                    Store(
+                        pointer: 119,
+                        value: 128,
+                    ),
+                    Emit((
+                        start: 128,
+                        end: 130,
+                    )),
+                    Store(
+                        pointer: 119,
+                        value: 130,
+                    ),
+                    Emit((
+                        start: 130,
+                        end: 132,
+                    )),
+                    Store(
+                        pointer: 119,
+                        value: 132,
+                    ),
+                    Emit((
+                        start: 132,
+                        end: 134,
+                    )),
+                    Store(
+                        pointer: 119,
+                        value: 134,
+                    ),
+                    Emit((
+                        start: 134,
+                        end: 136,
+                    )),
+                    Store(
+                        pointer: 119,
+                        value: 136,
+                    ),
+                    Emit((
+                        start: 136,
+                        end: 139,
+                    )),
+                    Emit((
+                        start: 142,
+                        end: 143,
+                    )),
+                    ImageStore(
+                        image: 144,
+                        coordinate: 3,
+                        array_index: None,
+                        value: 143,
+                    ),
+                    Return(
+                        value: None,
+                    ),
+                ],
+            ),
+        ),
+    ],
+)
