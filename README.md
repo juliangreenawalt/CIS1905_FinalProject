@@ -1,4 +1,6 @@
 
+## HOW TO RUN
+
 cargo build to download dependencies
 
 Run main in src to start. cargo run should do.
